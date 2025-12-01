@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <script>
+
+        var a = 0;
+        var b = 0
+
+        function povecajA() {
+            a = parseInt(document.getElementById("a").value);
+            a = a + 1;
+            console.log(a);
+            document.getElementById("a").value = a;
+        }
+
+        function povecajB() {
+            b = parseInt(document.getElementById("b").value);
+            b = b + 2;
+            console.log(b);
+            document.getElementById("b").value = b;
+        }
+
+
+        function izracunaj() {
+            a = parseInt(document.getElementById("a").value);
+            b = parseInt(document.getElementById("b").value);
+            document.getElementById("zbroj").value = a + b
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Kalkulator</h1>
+
+    <p>Unesite dva broja koja ćete zbrojiti</p>
+    <span>A:</span>
+    <input type="number" id="a">
+
+    <br />
+    <br />
+
+    <span>B:</span>
+    <input type="number" id="b">
+
+    <br />
+    <br />
+
+    <span>Zbroj:</span>
+    <input type="number" id="zbroj">
+
+    <br />
+    <br />
+
+    <!-- onclick - kada korisnik klikne na button, onda se poziva metoda povecajA()-->
+    <button onclick="povecajA()">Povećaj A broj za 1</button>
+    <button onclick="povecajB()">Povećaj B broj za 2</button>
+
+    <button onclick="izracunaj()">Izracunaj zbroj</button>
+
+</body>
+
+</html>
